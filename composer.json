@@ -1,0 +1,12 @@
+{
+    "name": "digitonic/custom-validation-rules",
+    "type": "laravel-package",
+    "authors": [
+        {
+            "name": "MrTammer",
+            "email": "juanick@hotmail.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
