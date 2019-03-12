@@ -32,7 +32,7 @@ class AllowedRecipientsValidator
                     $proto = $this->libPhoneNumber->parse($this->preparePhoneNumber($phoneNumber), null);
                     if (!in_array(
                         $this->libPhoneNumber->getRegionCodeForNumber($proto),
-                        config('digitonic.custom-validation.allowed_recipients.allowed_origins')
+                        config('digitonic.custom-validation.allowed_mobile_origins')
                     )) {
                         $invalidNumbers[] = $phoneNumber;
                     }

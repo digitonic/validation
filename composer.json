@@ -19,7 +19,8 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "giggsey/libphonenumber-for-php": "^8.4"
+        "giggsey/libphonenumber-for-php": "^8.4",
+        "league/csv": "^9.2"
     },
     "extra": {
         "laravel": {
