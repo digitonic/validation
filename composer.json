@@ -7,6 +7,25 @@
             "email": "juanick@hotmail.fr"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Digitonic\\CustomValidation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Digitonic\\CustomValidation\\Tests\\": "tests"
+        }
+    },
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "giggsey/libphonenumber-for-php": "^8.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Digitonic\\CustomValidation\\CustomValidationServiceProvider"
+            ]
+        }
+    }
 }
