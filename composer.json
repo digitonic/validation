@@ -1,5 +1,5 @@
 {
-    "name": "digitonic/custom-validation-rules",
+    "name": "digitonic/validation",
     "type": "laravel-package",
     "authors": [
         {
