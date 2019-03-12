@@ -30,14 +30,14 @@ class CustomValidationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/custom-validation.php', 'digitonic.custom-validation');
+        $this->mergeConfigFrom(__DIR__.'/../config/validation.php', 'digitonic.validation');
 
         $this->commands([
             Installer::class,
         ]);
 
         $this->publishes([
-            __DIR__.'/../config/custom-validation.php' => config_path('digitonic/custom-validation.php'),
+            __DIR__.'/../config/validation.php' => config_path('digitonic/validation.php'),
         ]);
     }
 }
