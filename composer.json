@@ -3,8 +3,8 @@
     "type": "laravel-package",
     "authors": [
         {
-            "name": "MrTammer",
-            "email": "juanick@hotmail.fr"
+            "name": "yannick-digitonic",
+            "email": "yannick@digitonic.co.uk"
         }
     ],
     "autoload": {
