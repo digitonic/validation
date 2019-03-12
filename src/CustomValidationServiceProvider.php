@@ -18,12 +18,9 @@ class CustomValidationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        Validator::extend('unique_to_organization', IsUniqueToOrganizationValidator::class . '@validate');
         Validator::extend('allowed_recipients', AllowedRecipientsValidator::class . '@validate');
         Validator::extend('csv', CsvValidator::class . '@validate');
         Validator::extend('phone_number_index', PhoneNumberIndexValidator::class . '@validate');
-//        Validator::extend('within_business_hours', WithinBusinessHoursValiadator::class . '@validate');
-//        Validator::extend('scheduled_pauses', ScheduledPausesValidator::class . '@validate');
     }
 
     /**
