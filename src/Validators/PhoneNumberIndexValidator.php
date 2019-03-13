@@ -45,7 +45,7 @@ class PhoneNumberIndexValidator
                                 $proto = $this->libPhoneNumber->parse($this->preparePhoneNumber($phoneNumber), null);
                                 if (!in_array(
                                     $this->libPhoneNumber->getRegionCodeForNumber($proto),
-                                    config('digitonic.custom-validation.allowed_mobile_origins')
+                                    config('digitonic.validation.allowed_mobile_origins')
                                 )) {
                                     $invalidNumbers[] = $phoneNumber;
                                 }
