@@ -9,12 +9,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Digitonic\\CustomValidation\\": "src"
+            "Digitonic\\Validation\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Digitonic\\CustomValidation\\Tests\\": "tests"
+            "Digitonic\\Validation\\Tests\\": "tests"
         }
     },
     "minimum-stability": "stable",
@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Digitonic\\CustomValidation\\CustomValidationServiceProvider"
+                "Digitonic\\Validation\\ValidationServiceProvider"
             ]
         }
     }

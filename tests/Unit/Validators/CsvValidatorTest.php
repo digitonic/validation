@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\CustomValidation\Validators;
+namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
 use Illuminate\Support\Facades\Validator;
 use Tests\TestCase;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Digitonic\Validation\Tests\Feature;
 
 use Illuminate\Support\Facades\File;
 use Tests\TestCase;
