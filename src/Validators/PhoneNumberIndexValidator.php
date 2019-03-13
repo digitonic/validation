@@ -1,6 +1,6 @@
 <?php
 
-namespace Digitonic\CustomValidation\Validators;
+namespace Digitonic\Validation\Validators;
 
 use Illuminate\Validation\Concerns\ValidatesAttributes;
 use Illuminate\Validation\Validator;

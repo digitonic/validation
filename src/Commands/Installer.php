@@ -1,8 +1,8 @@
 <?php
 
-namespace Digitonic\CustomValidation\Commands;
+namespace Digitonic\Validation\Commands;
 
-use Digitonic\CustomValidation\CustomValidationServiceProvider;
+use Digitonic\Validation\ValidationServiceProvider;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
@@ -24,6 +24,6 @@ class Installer extends Command
 
     public function handle()
     {
-        Artisan::call('vendor:publish', ['--provider' => CustomValidationServiceProvider::class]);
+        Artisan::call('vendor:publish', ['--provider' => ValidationServiceProvider::class]);
     }
 }

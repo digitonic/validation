@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\CustomValidation\Validators;
+namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
 use Illuminate\Support\Facades\Validator;
 use Tests\TestCase;
@@ -10,7 +10,7 @@ class PhoneNumberIndexValidatorTest extends TestCase
     /** @test */
     public function can_validate_phone_number_index()
     {
-        config(['digitonic.custom-validation.allowed_mobile_origins' => ['GB']]);
+        config(['digitonic.validation.allowed_mobile_origins' => ['GB']]);
 
         // Great Britain is allowed
         $validator = Validator::make(['csv' => "mobile\n447496368725", 'phone_index' => 0], ['phone_index' => 'phone_number_index:csv']);
