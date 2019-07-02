@@ -12,13 +12,13 @@ Install the package (Remember to add the private digitonic satis repo to the com
 $ composer require digitonic/validation 
 ```
 
-Install command config
+### Install command config
 
 ```bash
 $ php artisan dig:va:ins
 ```
 
-Validators keys
+### Validators keys
 
 ```bash
 $ allowed_recipients
@@ -29,3 +29,22 @@ $ csv
 ```bash
 $ phone_number_index
 ```
+Check to ensure a validated string contains one or more uppercase characters.
+```bash
+$ has_uppercase
+```
+
+Check to ensure a validated string contains one or more lowercase characters.
+```bash
+$ has_lowercase
+```
+Check to ensure a validated string contains one or more numeric characters.
+```bash
+$ has_numeric
+```
+
+Check to ensure a validated string contains one or more special characters.
+```bash
+$ has_special
+```
+

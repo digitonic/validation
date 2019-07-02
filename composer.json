@@ -5,6 +5,10 @@
         {
             "name": "yannick-digitonic",
             "email": "yannick@digitonic.co.uk"
+        },
+        {
+            "name": "Christopher Crawford",
+            "email": "christopher@digitonic.co.uk"
         }
     ],
     "autoload": {
