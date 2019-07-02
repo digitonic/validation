@@ -12,6 +12,6 @@ class LowercaseValidator extends AbstractPasswordValidator
     public function validate($attribute, $value, $parameters, Validator $validator)
     {
         $this->regex = '([a-z])';
-        return (bool) preg_match($this->regex, $value);
+        return parent::validate($attribute, $value, $parameters, $validator);
     }
 }

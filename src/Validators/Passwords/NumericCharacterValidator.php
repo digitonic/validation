@@ -12,6 +12,5 @@ class NumericCharacterValidator extends AbstractPasswordValidator
     public function validate($attribute, $value, $parameters, Validator $validator)
     {
         $this->regex = '([0-9])';
-        return (bool) preg_match($this->regex, $value);
-    }
+        return parent::validate($attribute, $value, $parameters, $validator);    }
 }
