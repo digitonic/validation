@@ -13,10 +13,6 @@ class PasswordStrengthValidator
     {
         $regex = '#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#';
 
-        if (preg_match($regex, $value)) {
-            return true;
-        }
-
-        return false;
+        return (bool) preg_match($regex, $value);
     }
 }
