@@ -1,18 +1,17 @@
 <?php
 
-namespace Digitonic\Validation\Validators;
+namespace Digitonic\Validation\Validators\Passwords;
 
 use Illuminate\Validation\Concerns\ValidatesAttributes;
 use Illuminate\Validation\Validator;
 
-class PasswordStrengthValidator
+class UppercaseValidator extends AbstractPasswordValidator
 {
     use ValidatesAttributes;
 
     public function validate($attribute, $value, $parameters, Validator $validator)
     {
-        $regex = '#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#';
-
-        return (bool) preg_match($regex, $value);
+        $this->regex = '([A-Z])';
+        return (bool) preg_match($this->regex, $value);
     }
 }
