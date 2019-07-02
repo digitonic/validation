@@ -29,3 +29,6 @@ $ csv
 ```bash
 $ phone_number_index
 ```
+```bash
+$ password_strength
+```
