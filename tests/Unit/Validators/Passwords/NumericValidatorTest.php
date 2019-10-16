@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class NumericValidatorTest extends TestCase
+class NumericValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_detect_a_password_with_a_numeric_character()

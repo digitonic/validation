@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class PhoneNumberIndexValidatorTest extends TestCase
+class PhoneNumberIndexValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_validate_phone_number_index()

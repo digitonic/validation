@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class LowercaseValidatorTest extends TestCase
+class LowercaseValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_detect_a_password_with_a_lowercase_character()
