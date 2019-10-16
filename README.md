@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/digitonic/validation.svg?style=flat-square)](https://packagist.org/packages/digitonic/validation)
 [![Build Status](https://img.shields.io/travis/digitonic/validation/master.svg?style=flat-square)](https://travis-ci.org/digitonic/validation)
-[![Quality Score](https://img.shields.io/scrutinizer/g/digitonic/validation.svg?style=flat-square)](https://scrutinizer-ci.com/g/digitonic/validation)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/digitonic/validation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/digitonic/validation/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/digitonic/validation.svg?style=flat-square)](https://packagist.org/packages/digitonic/validation)
 
 This package will provide some custom validation out of the box in one single package. Using a configuration, you may create your own custom validations.
