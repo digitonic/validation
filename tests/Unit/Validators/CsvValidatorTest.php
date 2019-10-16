@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class CsvValidatorTest extends TestCase
+class CsvValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_validate_csvs()

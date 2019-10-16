@@ -1,16 +1,40 @@
 {
     "name": "digitonic/validation",
-    "type": "laravel-package",
+    "description": "A Laravel custom validation package with some out of the box validators.",
+    "keywords": [
+        "digitonic",
+        "validation"
+    ],
+    "homepage": "https://github.com/digitonic/validation",
+    "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "yannick-digitonic",
-            "email": "yannick@digitonic.co.uk"
+            "email": "yannick@digitonic.co.uk",
+            "role": "Developer"
         },
         {
             "name": "Christopher Crawford",
-            "email": "christopher@digitonic.co.uk"
+            "email": "christopher@digitonic.co.uk",
+            "role": "Developer"
+        },
+        {
+            "name": "Steven Richardson",
+            "email": "steven@digitonic.co.uk",
+            "role": "Developer"
         }
     ],
+    "require": {
+        "php": "^7.2",
+        "giggsey/libphonenumber-for-php": "^8.4",
+        "illuminate/support": "5.8.*|6.*",
+        "league/csv": "^9.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
     "autoload": {
         "psr-4": {
             "Digitonic\\Validation\\": "src"
@@ -21,10 +45,13 @@
             "Digitonic\\Validation\\Tests\\": "tests"
         }
     },
-    "minimum-stability": "stable",
-    "require": {
-        "giggsey/libphonenumber-for-php": "^8.4",
-        "league/csv": "^9.2"
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {

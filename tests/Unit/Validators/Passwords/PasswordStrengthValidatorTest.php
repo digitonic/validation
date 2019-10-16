@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\Validators\Passwords;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class PasswordStrengthValidatorTest extends TestCase
+class PasswordStrengthValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_detect_all_required_password_validators()

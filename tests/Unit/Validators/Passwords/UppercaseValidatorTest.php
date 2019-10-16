@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class UppercaseValidatorTest extends TestCase
+class UppercaseValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_detect_a_password_without_an_uppercase_character()

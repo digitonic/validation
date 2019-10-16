@@ -2,10 +2,10 @@
 
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
+use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
-use Tests\TestCase;
 
-class AllowedRecipientsValidatorTest extends TestCase
+class AllowedRecipientsValidatorTest extends BaseTestCase
 {
     /** @test */
     public function can_validate_allowed_phone_numbers_origin()

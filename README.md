@@ -1,50 +1,98 @@
-# Digitonic Validator
+# Digitonic Validation
 
-## Overview
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/digitonic/validation.svg?style=flat-square)](https://packagist.org/packages/digitonic/validation)
+[![Build Status](https://img.shields.io/travis/digitonic/validation/master.svg?style=flat-square)](https://travis-ci.org/digitonic/validation)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/digitonic/validation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/digitonic/validation/?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/digitonic/validation.svg?style=flat-square)](https://packagist.org/packages/digitonic/validation)
 
-This package will just provide some custom validator out of the box in one single package.
+This package will provide some custom validation out of the box in one single package. Using a configuration, you may create your own custom validations.
 
-## Getting Started
+## Installation
 
-Install the package (Remember to add the private digitonic satis repo to the composer.json)
+You can install the package via composer:
 
 ```bash
 $ composer require digitonic/validation 
 ```
 
-### Install command config
+### Publish the config
 
 ```bash
-$ php artisan dig:va:ins
+$ php artisan vendor:publish --provider="Digitonic\Validation\ValidationServiceProvider"
 ```
 
 ### Validators keys
 
+##### Allowed Recipients
+
+This validator will check for the validity of a given mobile phone number in a configured country.  
+
 ```bash
-$ allowed_recipients
+allowed_recipients
 ```
+
+##### CSV
+
+This validator will check the contents of a given CSV has at least one valid row.
+
 ```bash
-$ csv
+csv
 ```
+
+##### Phone Number Index
+
+This validator will check the contents of a passed CSV file for a given key and validate that this value is a valid mobile phone number within a configured country.
+ 
 ```bash
-$ phone_number_index
+phone_number_index
 ```
+
+### Password Validation
+
 Check to ensure a validated string contains one or more uppercase characters.
+
 ```bash
-$ has_uppercase
+has_uppercase
 ```
 
 Check to ensure a validated string contains one or more lowercase characters.
 ```bash
-$ has_lowercase
+has_lowercase
 ```
 Check to ensure a validated string contains one or more numeric characters.
 ```bash
-$ has_numeric
+has_numeric
 ```
 
 Check to ensure a validated string contains one or more special characters.
 ```bash
-$ has_special
+has_special
 ```
 
+### Testing
+
+``` bash
+composer test
+```
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+### Security
+
+If you discover any security related issues, please email steven@digitonic.co.uk instead of using the issue tracker.
+
+## Credits
+
+- [Yannick Glade](https://github.com/MrTammer)
+- [Chris Crawford](https://github.com/ChrisCrawford1)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
