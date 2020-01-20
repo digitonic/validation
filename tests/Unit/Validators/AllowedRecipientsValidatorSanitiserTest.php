@@ -3,7 +3,6 @@
 namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 
 use Digitonic\Validation\Tests\BaseTestCase;
-use Digitonic\Validation\Validators\AllowedRecipientsValidatorSanitiser;
 use Illuminate\Support\Facades\Validator;
 
 class AllowedRecipientsValidatorSanitiserTest extends BaseTestCase
@@ -31,15 +30,11 @@ class AllowedRecipientsValidatorSanitiserTest extends BaseTestCase
         '+50240342933'
     ];
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-        config(['digitonic.validation.allowed_mobile_origins' => ['GB']]);
-    }
-
     /** @test */
     public function can_validate_allowed_phone_numbers_origin_strict_mode()
     {
+        config(['digitonic.validation.allowed_mobile_origins' => ['GB']]);
+
         foreach (self::VALID_PHONES as $phone) {
             $validator = Validator::make(['phone_number' => $phone], ['phone_number' => 'allowed_recipients_sanitiser']);
             $this->assertFalse($validator->fails());
@@ -48,20 +43,6 @@ class AllowedRecipientsValidatorSanitiserTest extends BaseTestCase
         foreach (self::INVALID_PHONES as $phone) {
             $validator = Validator::make(['phone_number' => $phone], ['phone_number' => 'allowed_recipients_sanitiser|required']);
             $this->assertTrue($validator->fails());
-        }
-    }
-
-    /** @test */
-    public function can_sanitise_and_get_formatted_number_if_valid()
-    {
-        $validator = new AllowedRecipientsValidatorSanitiser();
-
-        foreach (self::VALID_PHONES as $phone) {
-            $this->assertEquals(self::SANITISED_PHONE , $validator->getFormattedNumber($phone));
-        }
-
-        foreach (self::INVALID_PHONES as $phone) {
-            $this->assertFalse($validator->getFormattedNumber($phone));
         }
     }
 }
