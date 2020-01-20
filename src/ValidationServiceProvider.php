@@ -4,7 +4,7 @@ namespace Digitonic\Validation;
 
 use Illuminate\Support\ServiceProvider;
 use Digitonic\Validation\Validators\AllowedRecipientsValidator;
-use Digitonic\Validation\Validators\AllowedRecipientsValidatorSanitiser;
+use Digitonic\Validation\Validators\AllowedRecipientsValidatorStrict;
 use Digitonic\Validation\Validators\CsvValidator;
 use Digitonic\Validation\Validators\Passwords\LowercaseValidator;
 use Digitonic\Validation\Validators\Passwords\NumericCharacterValidator;
@@ -21,7 +21,7 @@ class ValidationServiceProvider extends ServiceProvider
     public function boot()
     {
         Validator::extend('allowed_recipients', AllowedRecipientsValidator::class . '@validate');
-        Validator::extend('allowed_recipients_sanitiser', AllowedRecipientsValidatorSanitiser::class . '@validate');
+        Validator::extend('allowed_recipients_strict', AllowedRecipientsValidatorStrict::class . '@validate');
         Validator::extend('csv', CsvValidator::class . '@validate');
         Validator::extend('phone_number_index', PhoneNumberIndexValidator::class . '@validate');
         Validator::extend('has_uppercase', UppercaseValidator::class  . '@validate');

@@ -6,7 +6,7 @@ use Digitonic\Validation\Services\AllowedRecipientsSanitiser;
 use Illuminate\Validation\Concerns\ValidatesAttributes;
 use libphonenumber\PhoneNumberUtil;
 
-class AllowedRecipientsValidatorSanitiser
+class AllowedRecipientsValidatorStrict
 {
     use ValidatesAttributes;
 

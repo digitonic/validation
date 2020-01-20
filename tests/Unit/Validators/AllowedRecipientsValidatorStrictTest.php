@@ -5,7 +5,7 @@ namespace Digitonic\Validation\Tests\Unit\CustomValidation\Validators;
 use Digitonic\Validation\Tests\BaseTestCase;
 use Illuminate\Support\Facades\Validator;
 
-class AllowedRecipientsValidatorSanitiserTest extends BaseTestCase
+class AllowedRecipientsValidatorStrictTest extends BaseTestCase
 {
     const SANITISED_PHONE = '447496368725';
 
@@ -36,12 +36,12 @@ class AllowedRecipientsValidatorSanitiserTest extends BaseTestCase
         config(['digitonic.validation.allowed_mobile_origins' => ['GB']]);
 
         foreach (self::VALID_PHONES as $phone) {
-            $validator = Validator::make(['phone_number' => $phone], ['phone_number' => 'allowed_recipients_sanitiser']);
+            $validator = Validator::make(['phone_number' => $phone], ['phone_number' => 'allowed_recipients_strict']);
             $this->assertFalse($validator->fails());
         }
 
         foreach (self::INVALID_PHONES as $phone) {
-            $validator = Validator::make(['phone_number' => $phone], ['phone_number' => 'allowed_recipients_sanitiser|required']);
+            $validator = Validator::make(['phone_number' => $phone], ['phone_number' => 'allowed_recipients_strict|required']);
             $this->assertTrue($validator->fails());
         }
     }
