@@ -52,19 +52,16 @@ class AllowedRecipientsSanitiserTest extends BaseTestCase
     }
 
     /** @test */
-    public function can_sanitise_phone_number_to_create_lib_phone_number_object()
+    public function can_get_lib_phone_number_object()
     {
-        foreach (self::VALID_PHONES as $phone) {
-            $this->assertEquals('+' . self::SANITISED_PHONE , $this->sanitiser->sanitisePhoneNumber($phone));
-        }
+       $phoneObject = $this->sanitiser->getPhoneNumberObject(self::SANITISED_PHONE);
+       $this->assertTrue(get_class($phoneObject) == "libphonenumber\PhoneNumber");
     }
 
     /** @test */
-    public function can_get_lib_phone_number_object_if_valid()
+    public function can_get_region_for_lib_phone_number()
     {
-        foreach (self::VALID_PHONES as $phone) {
-           $phoneObject = $this->sanitiser->getPhoneNumberObject($this->sanitiser->sanitisePhoneNumber($phone));
-           $this->assertTrue("libphonenumber\PhoneNumber" == get_class($phoneObject));
-        }
+        $phoneObject = $this->sanitiser->getPhoneNumberObject(self::SANITISED_PHONE);
+        $this->assertTrue($this->sanitiser->getRegionCodeForNumber($phoneObject) == "GB");
     }
 }

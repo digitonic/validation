@@ -3,6 +3,7 @@
 namespace Digitonic\Validation\Services;
 
 use libphonenumber\NumberParseException;
+use libphonenumber\PhoneNumber;
 use libphonenumber\PhoneNumberUtil;
 use libphonenumber\PhoneNumberFormat;
 
@@ -47,6 +48,15 @@ class AllowedRecipientsSanitiser
     }
 
     /**
+     * @param PhoneNumber $phoneNumber
+     * @return string
+     */
+    public function getRegionCodeForNumber(PhoneNumber $phoneNumber): string
+    {
+        return $this->libPhoneNumber->getRegionCodeForNumber($phoneNumber);
+    }
+
+    /**
      * Get phoneNumberObject.
      *
      * @param string $phoneNumber
@@ -73,7 +83,7 @@ class AllowedRecipientsSanitiser
      * @param string $phoneNumber
      * @return string
      */
-    public function sanitisePhoneNumber(string $phoneNumber): string
+    protected function sanitisePhoneNumber(string $phoneNumber): string
     {
         $phoneNumber = $this->getDigits($phoneNumber);
 
