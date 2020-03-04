@@ -29,7 +29,7 @@ class ValidationServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('digitonic.validation'),
+                __DIR__.'/../config/config.php' => config_path('digitonic/validation.php'),
             ], 'config');
         }
     }
