@@ -28,7 +28,7 @@
     "require": {
         "php": "^7.2|^8.0",
         "giggsey/libphonenumber-for-php": "8.*",
-        "illuminate/support": "7.*|8.*|9.*",
+        "illuminate/support": "7.*|8.*|9.*|10.*|11.*",
         "league/csv": "9.*"
     },
     "require-dev": {
